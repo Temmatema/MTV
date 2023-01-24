@@ -7,6 +7,7 @@ const sourcemaps = require('gulp-sourcemaps')
 const autoprefixer = require('gulp-autoprefixer')
 const gulppug = require('gulp-pug')
 const browsersync = require('browser-sync').create()
+const gulpCopy = require('gulp-copy');
 
 const paths = {
     styles: {
@@ -20,11 +21,29 @@ const paths = {
     pug: {
         src: 'source/*.pug',
         dest: 'dist/'
+    },
+    img: {
+        src: 'source/img/**/*.{png,jpg,svg}',
+        dest: 'dist/img'
+    },
+    script: {
+        src: 'source/js/*.js',
+        dest: 'dist/js'
     }
 }
 
 function clean () {
     return del('dist')
+}
+
+function copyImages () {
+    return gulp.src(paths.img.src)
+    .pipe(gulpCopy(paths.img.dest, {prefix: 2}))
+}
+
+function copyScripts () {
+    return gulp.src(paths.script.src)
+    .pipe(gulpCopy(paths.script.dest, {prefix: 2}))
 }
 
 function styles () {
@@ -57,14 +76,17 @@ function watch () {
             baseDir: "./dist/"
         }
     });
-    gulp.watch(paths.styles.src, styles)
+    gulp.watch('source/js/*.js', copyScripts)
+    gulp.watch('source/less/**/*.less', styles)
     gulp.watch('source/**/*.pug', pug)
 }
 
-const build = gulp.series(clean, pug, styles, watch)
+const build = gulp.series(clean, pug, gulp.parallel(styles, copyScripts, copyImages), watch)
 
 exports.pug = pug
 exports.clean = clean
 exports.styles = styles
 exports.watch - watch
 exports.build = build
+exports.copyImages = copyImages
+exports.copyScripts = copyScripts
