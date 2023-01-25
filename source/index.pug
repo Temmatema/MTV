@@ -18,5 +18,79 @@ html(lang="en")
         a(href="#").page-header__toys
           h2.page-header__inner-title Детские #[br] игрушки
           include img/toy.svg
+
+      section.product
+        .product__wrapper
+          h2.product__title Вязаные корзинки
+          p.product__text товар недели
+          .product__presentation
+            p.product__description
+              | Экологически чистая пряжа, #[br] ручная работа.
+              | Доступны в шести #[br] расцветках и трёх размерах.
+            ul.product__list
+              li.product__item
+                span.product__property Цвет:
+                span.product__property тиффани/серый
+              li.product__item
+                span.product__property Диаметр:
+                span.product__property 25 см
+              li.product__item
+                span.product__property Высота:
+                span.product__property 15 см
+            a(href="#").product__image-link
+              img(src="img/triple-set-mobile.jpg", alt="Вязаные корзинки.") 
+            p.product__price Цена: 990 руб.
+            button(type="button").product__button.button Заказать
+
+      section.advantages
+        .advantages__wrapper
+          h1.advantages__title Коротко о нас:
+          ul.advantages__list
+            li.advantages__item.advantages__item-flower
+              p.advantages__text Экологически #[br] чистые материалы
+            li.advantages__item.advantages__item-style
+              p.advantages__text Скандинавский стиль #[br] по российской цене
+            li.advantages__item.advantages__item-heart
+              p.advantages__text Увеличивает лайки #[br] на фотографиях
+            li.advantages__item.advantages__item-ball
+              p.advantages__text Связано вручную #[br] с любовью и умилением
+            li.advantages__item.advantages__item-rocket
+              p.advantages__text Поддержка отечественного #[br] производителя
+            li.advantages__item.advantages__item-gift
+              p.advantages__text Поставляется #[br] в подарочной упаковке
+
+      section.review
+        .review__wrapper
+          h1.review__title Отзывы
+          article.review__summary
+            p.review__text 
+              | Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как 
+              | у популярных инстамамочек. #[br]
+              | В отчаянии, я накупила аксессуаров и игрушек в Мишке, #[br] 
+              | и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+            p.review__name Анастасия Красильникова
+              span @misssssiskras
+          .review__button-container
+            button.review__button-left
+            button.review__button-right
+          button.review__button-write.button написать
+
+      section.contacts
+        .contacts__wrapper 
+          h2.contacts__title Контакты
+          address.contacts__address 
+            ul.contacts__list 
+              li.cotacts__item
+                p.contacts__text e-mail:
+              li.cotacts__item
+                p.contacts__text info@mimimishkashop.ru
+              li.cotacts__item
+                p.contacts__text адрес:
+              li.cotacts__item
+                p.contacts__text 
+                  | г. Санкт-Петербург #[br]
+                  | ул. Большая Конюшенная #[br]
+                  | д. 19/8, офис 101
+
     script(src="https://code.jquery.com/jquery-3.5.1.min.js")
     script(src="js/script.js") 

@@ -2,6 +2,7 @@
 
 html {
     height: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -11,4 +12,25 @@ body {
     flex-direction: column;
     background-color: #fff;
     font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+.button {
+    display: block;
+    border: 2px solid #444444;
+    background: linear-gradient(1800deg, #444 50%, #fff 50%);
+    background-size: 200px 300px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    color: #444;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s;
+
+    &:hover {
+        background-position: 0 60px;
+        color: #fff;
+    }
 }
