@@ -9,5 +9,14 @@ html(lang="en")
     link(rel="stylesheet", href="css/style.min.css")
   body
     include pug/header
+    main 
+      section.page-header 
+        h1.page-header__title Милые штуки ручной #[br] работы для дома
+        a(href="#").page-header__interior
+          h2.page-header__inner-title Предметы #[br] интерьера
+          include img/interior.svg
+        a(href="#").page-header__toys
+          h2.page-header__inner-title Детские #[br] игрушки
+          include img/toy.svg
     script(src="https://code.jquery.com/jquery-3.5.1.min.js")
     script(src="js/script.js") 

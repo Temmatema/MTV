@@ -8,10 +8,43 @@
     display: none;
     top: 80px;
     width: 100%;
+    z-index: 3;
 }
 
 .main-nav__item {
     border-bottom: 1px solid #ececec;
+    position: relative;
+    background-color: #fff;
+}
+
+.main-nav__item--search {
+    transition: 0.15s;
+
+    svg {
+        position: absolute;
+        transform: translate(10vw, 31px);
+    }
+
+    &:hover {
+        path {
+            fill: #63D1BB;
+        }
+    }
+}
+
+.main-nav__item--cart {
+    transition: 0.15s;
+
+    svg {
+        position: absolute;
+        transform: translate(9.69vw, 30px);
+    }
+
+    &:hover {
+        path {
+            fill: #63D1BB;
+        }
+    }
 }
 
 .main-nav__link {
@@ -20,7 +53,7 @@
     line-height: 24px;
     text-decoration: none;
     color: #000;
-    padding-left: 76px;
+    padding-left: 25vw;
     padding-top: 27px;
     padding-bottom: 27px;
     display: block;
@@ -38,32 +71,4 @@
 
 .main-nav__logo {
     align-self: center;
-}
-
-.main-nav__button {
-    width: 20px;
-    height: 14px;
-    position: absolute;
-    right: 31px;
-    top: 32px;
-}
-
-.main-nav__bar {
-    display: block;
-    height: 0.15em;
-    width: 100%;
-    background: #231F20;
-    position: absolute;
-
-    &:first-child {
-        top: 0;
-    }
-
-    &:nth-child(2) {
-        top: 5.9px;
-    }
-
-    &:last-child {
-        bottom: 0;
-    }
 }

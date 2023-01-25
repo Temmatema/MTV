@@ -1,17 +1,17 @@
 header
     nav.main-nav
         a.main-nav__logo(href="#")
-            include ../img/mishka-logo-mobile.svg
-        .main-nav__button
-            span.main-nav__bar
-            span.main-nav__bar
-            span.main-nav__bar
+            object(data="img/mishka-logo-mobile.svg", type="image/svg+xml") 
+        button.main-nav__button.hamburger-button
+            span.hamburger-button__bar
         ul.main-nav__list
             li.main-nav__item
                 a.main-nav__link(href="") Каталог товаров
             li.main-nav__item
                 a.main-nav__link(href="#") Вязание на заказ
-            li.main-nav__item
+            li.main-nav__item.main-nav__item--search
+                include ../img/search.svg
                 a.main-nav__link(href="#") Поиск по сайту
-            li.main-nav__item
+            li.main-nav__item.main-nav__item--cart
+                include ../img/cart.svg
                 a.main-nav__link(href="#") Корзина: пока пуста
