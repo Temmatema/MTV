@@ -1,7 +1,9 @@
 header
     nav.main-nav
         a.main-nav__logo(href="#")
-            object(data="img/mishka-logo-mobile.svg", type="image/svg+xml") 
+            picture 
+                source(media="(min-width: 768px)", srcset="img/mishka-logo-tablet.svg")
+                img(src="../img/mishka-logo-mobile.svg", alt="Мишка")
         button.main-nav__button.hamburger-button
             span.hamburger-button__bar
         ul.main-nav__list

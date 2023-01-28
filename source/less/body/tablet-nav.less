@@ -1,0 +1,42 @@
+.tablet-nav {
+    display: none;
+
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 109px;
+    }
+}
+
+.tablet-nav__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 36px;
+}
+
+.tablet-nav__link {
+    display: block;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 24px;
+    color: #000;
+}
+
+.tablet-nav__item--receipt {
+    display: none;
+}
+
+.tablet-nav__item--sale {
+    display: none;
+}
+
+.tablet-nav__text-delivery {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: #444;
+    margin: 0;
+}

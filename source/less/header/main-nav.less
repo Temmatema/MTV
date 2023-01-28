@@ -1,28 +1,61 @@
+.main-nav {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 79px;
+    justify-content: center;
+    border-bottom: 1px solid #ececec;
+    background-color: #fff;
+
+    @media (min-width: 768px) {
+        height: 88px;
+        flex-direction: row;
+        padding: 0 50px;
+        justify-content: space-between;
+    }
+}
+
 .main-nav__list {
     padding: 0;
     margin: 0;
     list-style-type: none;
-    display: flex;
-    flex-direction: column;
     position: absolute;
     display: none;
     top: 80px;
     width: 100%;
     z-index: 3;
+
+    @media (min-width: 768px) {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        width: auto;
+    }
 }
 
 .main-nav__item {
     border-bottom: 1px solid #ececec;
     position: relative;
     background-color: #fff;
+
+    @media (min-width: 768px) {
+        border: none;
+
+        &:first-child,
+        &:nth-child(2) {
+            display: none;
+        }
+    }
 }
 
 .main-nav__item--search {
-    transition: 0.15s;
-
     svg {
         position: absolute;
         transform: translate(10vw, 31px);
+
+        path {
+            transition: 0.2s;
+        }
     }
 
     &:hover {
@@ -30,19 +63,51 @@
             fill: #63D1BB;
         }
     }
+
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 82px;
+        border-left: 1px solid #ececec;
+        border-right: 1px solid #ececec;
+        cursor: pointer;
+
+        a {
+            display: none;
+        }
+
+        svg {
+            position: static;
+            transform: translate(0);
+        }
+    }
 }
 
 .main-nav__item--cart {
-    transition: 0.15s;
-
     svg {
         position: absolute;
         transform: translate(9.69vw, 30px);
+
+        path {
+            transition: 0.2s;
+        }
     }
 
     &:hover {
         path {
             fill: #63D1BB;
+        }
+    }
+
+    @media (min-width: 768px) {
+        padding-left: 83px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        svg {
+            transform: translate(-50px, 0);
         }
     }
 }
@@ -57,18 +122,16 @@
     padding-top: 27px;
     padding-bottom: 27px;
     display: block;
-}
 
-.main-nav {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    height: 79px;
-    justify-content: center;
-    border-bottom: 1px solid #ececec;
-    background-color: #fff;
+    @media (min-width: 768px) {
+        padding: 0;
+    }
 }
 
 .main-nav__logo {
     align-self: center;
+
+    img {
+        vertical-align: middle;
+    }
 }

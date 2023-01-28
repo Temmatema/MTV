@@ -11,13 +11,25 @@ html(lang="en")
     include pug/header
     main 
       section.page-header 
+        .page-header__tablet-nav.tablet-nav 
+          ul.tablet-nav__list
+            li.tablet-nav__item
+              a.tablet-nav__link(href="#").tablet-nav__link-catalog Каталог товаров
+            li.tablet-nav__item
+              a.tablet-nav__link(href="#").tablet-nav__link-croch Вязание на заказ
+            li.tablet-nav__item.tablet-nav__item--receipt
+              a.tablet-nav__link(href="#") Новые поступления
+            li.tablet-nav__item.tablet-nav__item--sale
+              a.tablet-nav__link(href="#") Распродажа
+          p.tablet-nav__text-delivery Бесплатная доставка по России
         h1.page-header__title Милые штуки ручной #[br] работы для дома
-        a(href="#").page-header__interior
-          h2.page-header__inner-title Предметы #[br] интерьера
-          include img/interior.svg
-        a(href="#").page-header__toys
-          h2.page-header__inner-title Детские #[br] игрушки
-          include img/toy.svg
+        .page-header__category
+          a(href="#").page-header__interior
+            h2.page-header__inner-title Предметы #[br] интерьера
+            include img/interior.svg
+          a(href="#").page-header__toys
+            h2.page-header__inner-title Детские #[br] игрушки
+            include img/toy.svg
 
       section.product
         .product__wrapper
