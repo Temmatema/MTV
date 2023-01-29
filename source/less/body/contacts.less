@@ -1,5 +1,13 @@
 .contacts__wrapper {
     padding: 45px 30px 62px 30px;
+
+    @media(min-width: 768px) {
+        padding: 80px 50px 49px 50px;
+        background-image: url(../img/flag.svg);
+        background-repeat: no-repeat;
+        background-position-x: calc(100% - 52px);
+        background-position-y: 58px;
+    }
 }
 
 .contacts__title {
@@ -8,6 +16,12 @@
     font-size: 25px;
     line-height: 30px;
     margin-bottom: 28px;
+
+    @media(min-width: 768px) {
+        font-size: 43px;
+        line-height: 50px;
+        margin-bottom: 49px;
+    }
 }
 
 .contacts__address {
@@ -21,6 +35,12 @@
     display: grid;
     grid-template-columns: 76px 183px;
     row-gap: 30px;
+
+    @media(min-width: 768px) {
+        grid-template-columns: 63px 240px 63px 257px;
+        column-gap: 15px;
+        justify-content: space-evenly;
+    }
 }
 
 .contacts__text {
@@ -29,13 +49,47 @@
     font-size: 14px;
     line-height: 30px;
     color: #444;
+
+    @media(min-width: 768px) {
+        font-size: 17px;
+        line-height: 30px;
+    }
+}
+
+.contacts__text-mail {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 170px;
+        height: 1px;
+        background-color: #62D1BA;
+        bottom: 0;
+        left: 0;
+    }
+
+    @media(min-width: 768px) {
+        &::after {
+            width: 204px;
+        }
+    }
 }
 
 .contacts__wrapper-button {
     padding: 42px 30px 39px;
+
+    @media(min-width: 768px) {
+        padding: 55px;
+    }
 }
 
 .contacts__button {
     height: 52px;
     width: 100%;
+
+    @media(min-width: 768px) {
+        width: 230px;
+        margin: 0 auto;
+    }
 }

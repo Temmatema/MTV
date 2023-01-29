@@ -4,7 +4,7 @@
     position: relative;
     height: 79px;
     justify-content: center;
-    border-bottom: 1px solid #ececec;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     background-color: #fff;
 
     @media (min-width: 768px) {
@@ -12,6 +12,11 @@
         flex-direction: row;
         padding: 0 50px;
         justify-content: space-between;
+    }
+
+    @media (min-width: 1150px) {
+        flex-direction: row;
+        justify-content: start;
     }
 }
 
@@ -31,19 +36,39 @@
         flex-direction: row;
         width: auto;
     }
+
+    @media (min-width: 1150px) {
+        display: grid;
+        grid-template-columns: 184px 228px 1fr 86px 266px;
+        width: 100%;
+    }
 }
 
 .main-nav__item {
-    border-bottom: 1px solid #ececec;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     position: relative;
     background-color: #fff;
 
     @media (min-width: 768px) {
         border: none;
 
-        &:first-child,
-        &:nth-child(2) {
+        &--catalog,
+        &--croch {
             display: none;
+        }
+    }
+
+    @media(min-width: 1150px) {
+        &--catalog {
+            display: flex;
+            align-items: center;
+            border-right: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        &--croch {
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     }
 }
@@ -69,8 +94,8 @@
         justify-content: center;
         align-items: center;
         width: 82px;
-        border-left: 1px solid #ececec;
-        border-right: 1px solid #ececec;
+        border-left: 1px solid rgba(0, 0, 0, 0.1);
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
         cursor: pointer;
 
         a {
@@ -81,6 +106,10 @@
             position: static;
             transform: translate(0);
         }
+    }
+
+    @media (min-width: 1150px) {
+        grid-column: 4/5;
     }
 }
 
@@ -110,6 +139,10 @@
             transform: translate(-50px, 0);
         }
     }
+
+    @media (min-width: 1150px) {
+        grid-column: 5/6;
+    }
 }
 
 .main-nav__link {
@@ -133,5 +166,14 @@
 
     img {
         vertical-align: middle;
+    }
+
+    @media(min-width: 1150px) {
+        position: absolute;
+        z-index: 4;
+        width: 150px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
     }
 }

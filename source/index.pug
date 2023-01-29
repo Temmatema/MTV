@@ -34,7 +34,7 @@ html(lang="en")
       section.product
         .product__wrapper
           h2.product__title Вязаные корзинки
-          p.product__text товар недели
+          p.product__text товар #[br] недели
           .product__presentation
             p.product__description
               | Экологически чистая пряжа, #[br] ручная работа.
@@ -50,7 +50,9 @@ html(lang="en")
                 span.product__property Высота:
                 span.product__property 15 см
             a(href="#").product__image-link
-              img(src="img/triple-set-mobile.jpg", alt="Вязаные корзинки.") 
+              picture 
+                source(media="(min-width: 768px)", srcset="img/triple-set-tablet.jpg")
+                img(src="img/triple-set-mobile.jpg", alt="Вязаные корзинки.") 
             p.product__price Цена: 990 руб.
             button(type="button").product__button.button Заказать
 
@@ -95,7 +97,7 @@ html(lang="en")
               li.cotacts__item
                 p.contacts__text e-mail:
               li.cotacts__item
-                p.contacts__text info@mimimishkashop.ru
+                p.contacts__text.contacts__text-mail info@mimimishkashop.ru
               li.cotacts__item
                 p.contacts__text адрес:
               li.cotacts__item
