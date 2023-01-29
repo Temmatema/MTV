@@ -13,10 +13,10 @@ html(lang="en")
       section.page-header 
         .page-header__tablet-nav.tablet-nav 
           ul.tablet-nav__list
-            li.tablet-nav__item
-              a.tablet-nav__link(href="#").tablet-nav__link-catalog Каталог товаров
-            li.tablet-nav__item
-              a.tablet-nav__link(href="#").tablet-nav__link-croch Вязание на заказ
+            li.tablet-nav__item.tablet-nav__item--catalog
+              a.tablet-nav__link(href="#") Каталог товаров
+            li.tablet-nav__item.tablet-nav__item--croch
+              a.tablet-nav__link(href="#") Вязание на заказ
             li.tablet-nav__item.tablet-nav__item--receipt
               a.tablet-nav__link(href="#") Новые поступления
             li.tablet-nav__item.tablet-nav__item--sale
@@ -49,8 +49,9 @@ html(lang="en")
               li.product__item
                 span.product__property Высота:
                 span.product__property 15 см
-            a(href="#").product__image-link
+            .product__image
               picture 
+                source(media="(min-width: 1150px)", srcset="img/triple-set-desktop.jpg")
                 source(media="(min-width: 768px)", srcset="img/triple-set-tablet.jpg")
                 img(src="img/triple-set-mobile.jpg", alt="Вязаные корзинки.") 
             p.product__price Цена: 990 руб.
@@ -106,8 +107,8 @@ html(lang="en")
                   | ул. Большая Конюшенная #[br]
                   | д. 19/8, офис 101
         include pug/map
-          .contacts__wrapper-button
-            button.contacts__button.button напишите нам
+        .contacts__wrapper-button
+          button.contacts__button.button напишите нам
 
       include pug/footer
     include pug/modal-window

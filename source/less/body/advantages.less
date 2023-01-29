@@ -5,6 +5,10 @@
     @media (min-width: 768px) {
         padding: 55px 50px 83px 50px;
     }
+
+    @media(min-width: 1150px) {
+        padding: 80px 250px 90px 225px;
+    }
 }
 
 .advantages__title {
@@ -17,6 +21,11 @@
         font-size: 43px;
         line-height: 50px;
         margin-bottom: 16px;
+    }
+
+    @media(min-width: 1150px) {
+        font-size: 53px;
+        line-height: 57px;
     }
 }
 
@@ -36,6 +45,14 @@
         grid-template-columns: 330px 330px;
         justify-content: space-evenly;
         row-gap: 28px;
+    }
+
+    @media(min-width: 1150px) { 
+        column-gap: 20px;
+    }
+
+    @media(min-width: 1500px) { 
+        grid-template-columns: 330px 330px 330px;
     }
 }
 
@@ -76,6 +93,11 @@
     @media (min-width: 490px) {
         grid-column: 1/2;
     }
+
+    @media(min-width: 1500px) { 
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
 }
 
 .advantages__item-ball {
@@ -102,5 +124,10 @@
     @media (min-width: 490px) {
         grid-column: 2/3;
         grid-row: 3/4;
+    }
+
+    @media(min-width: 1500px) { 
+        grid-column: 3/4;
+        grid-row: 2/3;
     }
 }

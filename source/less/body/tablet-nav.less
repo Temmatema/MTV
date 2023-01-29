@@ -6,6 +6,10 @@
         justify-content: space-between;
         margin-bottom: 109px;
     }
+
+    @media(min-width: 1150px) {
+        margin-bottom: 113px;
+    }
 }
 
 .tablet-nav__list {
@@ -14,6 +18,10 @@
     list-style: none;
     display: flex;
     gap: 36px;
+
+    @media(min-width: 1150px) {
+        gap: 62px;
+    }
 }
 
 .tablet-nav__link {
@@ -23,14 +31,39 @@
     font-size: 15px;
     line-height: 24px;
     color: #000;
+    transition: 0.2s;
+
+    &:hover {
+        opacity: 0.6;
+    }
+}
+
+.tablet-nav__item--catalog {
+    @media(min-width: 1150px) {
+        display: none;
+    }
+}
+
+.tablet-nav__item--croch {
+    @media(min-width: 1150px) {
+        display: none;
+    }
 }
 
 .tablet-nav__item--receipt {
     display: none;
+
+    @media(min-width: 1150px) {
+        display: block;
+    }
 }
 
 .tablet-nav__item--sale {
     display: none;
+
+    @media(min-width: 1150px) {
+        display: block;
+    }
 }
 
 .tablet-nav__text-delivery {

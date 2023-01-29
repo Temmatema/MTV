@@ -1,8 +1,7 @@
 footer.main-footer 
     .main-footer__wrapper
-        picture 
-            source(media="(min-width: 768px)", srcset="img/logo-footer.svg")
-            img(src="", alt="Мишка Лого").main-footer__logo
+        a.main-footer__logo
+            include ../img/logo-footer.svg
         ul.main-footer__list.social 
             li.main-footer__item.social__item 
                 a(href="#").main-footer__link.social__link

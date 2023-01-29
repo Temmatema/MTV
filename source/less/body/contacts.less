@@ -1,3 +1,22 @@
+.contacts {
+    @media(min-width: 1150px) {
+        display: grid;
+        grid-template-columns: 350px 527px;
+        grid-template-rows: 405px 52px;
+        justify-content: space-evenly;
+
+        background-image: url(../img/flag.svg);
+        background-repeat: no-repeat;
+        background-position-x: 114px;
+        background-position-y: 148px;
+
+        padding-top: 86px;
+        padding-right: 49px;
+        padding-bottom: 105px;
+        padding-left: 220px;
+    }
+}
+
 .contacts__wrapper {
     padding: 45px 30px 62px 30px;
 
@@ -7,6 +26,12 @@
         background-repeat: no-repeat;
         background-position-x: calc(100% - 52px);
         background-position-y: 58px;
+    }
+
+    @media(min-width: 1150px) {
+        padding: 0;
+        padding-top: 79px;
+        background-image: none;
     }
 }
 
@@ -21,6 +46,12 @@
         font-size: 43px;
         line-height: 50px;
         margin-bottom: 49px;
+    }
+
+    @media(min-width: 1150px) {
+        font-size: 53px;
+        line-height: 57px;
+        margin-bottom: 35px;
     }
 }
 
@@ -41,6 +72,12 @@
         column-gap: 15px;
         justify-content: space-evenly;
     }
+
+    @media(min-width: 1150px) {
+        grid-template-columns: 76px 220px;
+        justify-content: start;
+        column-gap: 3px;
+    }
 }
 
 .contacts__text {
@@ -51,6 +88,11 @@
     color: #444;
 
     @media(min-width: 768px) {
+        font-size: 17px;
+        line-height: 30px;
+    }
+
+    @media(min-width: 1150px) {
         font-size: 17px;
         line-height: 30px;
     }
@@ -81,6 +123,11 @@
 
     @media(min-width: 768px) {
         padding: 55px;
+    }
+
+    @media(min-width: 1150px) {
+        padding: 0;
+        justify-self: start;
     }
 }
 
